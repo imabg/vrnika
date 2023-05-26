@@ -1,0 +1,11 @@
+@baseUrl=http://localhost:8080/api
+
+### Create Company
+POST {{baseUrl}}/c/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Roadzen",
+    "url": "https://roadzen.io",
+    "isRemote": true
+}

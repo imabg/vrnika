@@ -9,4 +9,9 @@ func SetupRoutes(engine *fiber.App) {
 	api := engine.Group("/api")
 	// routes
 	api.Get("/healthcheck", handlers.HealthCheck)
+
+	// Company routes
+	capi := api.Group("/c")
+
+	capi.Post("/create", handlers.CreateCompany)
 }

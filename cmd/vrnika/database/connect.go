@@ -5,6 +5,7 @@ import (
 	"os"
 	"strconv"
 
+	"github.com/imabg/vrnika/pkg/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -24,5 +25,6 @@ func ConnectToDB() error {
 	if err != nil {
 		return err
 	}
+	DB.AutoMigrate(&models.Company{})
 	return nil
 }
