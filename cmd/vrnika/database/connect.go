@@ -25,6 +25,6 @@ func ConnectToDB() error {
 	if err != nil {
 		return err
 	}
-	DB.AutoMigrate(&models.Company{})
+	DB.AutoMigrate(&models.Company{}, &models.User{})
 	return nil
 }

@@ -14,4 +14,9 @@ func SetupRoutes(engine *fiber.App) {
 	capi := api.Group("/c")
 
 	capi.Post("/create", handlers.CreateCompany)
+
+	// User routes
+	uapi := api.Group("/u")
+
+	uapi.Post("/create", handlers.CreateUser)
 }
