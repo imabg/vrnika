@@ -17,8 +17,8 @@ type Payload struct {
 var seededRand *rand.Rand = rand.New(
 	rand.NewSource(time.Now().UnixNano()))
 
-// Generate variable length random OTP
-func GenerateOTP(length int) string {
+// Generate random string from charset with defined length
+func GenerateRandomString(length int) string {
 	otp := make([]byte, length)
 	for i := range otp {
 		otp[i] = charset[seededRand.Intn(len(charset))]
