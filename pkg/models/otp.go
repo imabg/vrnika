@@ -13,6 +13,10 @@ type OTP struct {
 	UpdatedAt int64     `gorm:"autoUpdateTime" json:"updatedAt"`
 }
 
+type OTPBody struct {
+	OTP string `json:"otp"`
+}
+
 func (o *OTP) Save(db *gorm.DB) error {
 	err := db.Create(&o).Error
 

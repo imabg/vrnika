@@ -14,6 +14,8 @@ type User struct {
 	Address     datatypes.JSON `json:"address,omitempty"`
 	Avatar      string         `json:"avatar,omitempty"`
 	RoleID      uint           `json:"roleId,omitempty"`
+	IsVerified  bool           `json:"isVerified"`
+	IsActive    bool           `gorm:"default:true" json:"isActive"`
 	Department  string         `gorm:"not null" json:"department"`
 	Designation string         `gorm:"not null" json:"designation"`
 	Type        string         `gorm:"not null" json:"type"`
